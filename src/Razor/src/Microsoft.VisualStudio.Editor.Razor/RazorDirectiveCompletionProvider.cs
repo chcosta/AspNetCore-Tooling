@@ -161,9 +161,10 @@ namespace Microsoft.VisualStudio.Editor.Razor
                     razorCompletionItem.InsertText,
                     // This groups all Razor directives together
                     sortText: "_RazorDirective_",
-                    rules: CompletionItemRules.Create(formatOnCommit: false),
+                    filterText: razorCompletionItem.DisplayText,
+                    properties: propertyDictionary.ToImmutableDictionary(),
                     tags: ImmutableArray.Create(WellKnownTags.Intrinsic),
-                    properties: propertyDictionary.ToImmutableDictionary());
+                    rules: CompletionItemRules.Create(formatOnCommit: false));
 
                 context.AddItem(completionItem);
             }

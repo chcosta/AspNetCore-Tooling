@@ -87,6 +87,8 @@ namespace Microsoft.VisualStudio.Editor.Razor
 
         public override bool IsSupportedProject => _isSupportedProject;
 
+        public override bool Subscribed => _subscribeCount > 0;
+
         public override Project Project =>
             _projectSnapshot.WorkspaceProject == null ?
             null :

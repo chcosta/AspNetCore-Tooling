@@ -11,7 +11,7 @@ using Newtonsoft.Json;
 namespace Microsoft.VisualStudio.LiveShare.Razor.Guest
 {
     [Export]
-    [ExportCollaborationService(typeof(ICollaborationService), Scope = SessionScope.Guest)]
+    [ExportCollaborationService(typeof(LiveShareClientService), Scope = SessionScope.Guest)]
     public class LiveShareClientProvider : ICollaborationServiceFactory
     {
         private LiveShareClientService _liveShareClientService;
@@ -50,37 +50,37 @@ namespace Microsoft.VisualStudio.LiveShare.Razor.Guest
         {
             return _liveShareClientService?.ConvertToSharedUri(localPath);
         }
+    }
 
-        private class LiveShareClientService : ICollaborationService, IDisposable
+    public class LiveShareClientService : ICollaborationService, IDisposable
+    {
+        private CollaborationSession _session;
+
+        public LiveShareClientService(CollaborationSession session)
         {
-            private CollaborationSession _session;
+            _session = session;
+        }
 
-            public LiveShareClientService(CollaborationSession session)
-            {
-                _session = session;
-            }
+        public event EventHandler Disposed;
 
-            public event EventHandler Disposed;
+        public void Dispose()
+        {
+            Disposed?.Invoke(this, null);
+        }
 
-            public void Dispose()
-            {
-                Disposed?.Invoke(this, null);
-            }
+        internal Task<TProxy> CreateServiceProxyAsync<TProxy>() where TProxy : class
+        {
+            return _session.GetRemoteServiceAsync<TProxy>(typeof(TProxy).Name, CancellationToken.None);
+        }
 
-            internal Task<TProxy> CreateServiceProxyAsync<TProxy>() where TProxy : class
-            {
-                return _session.GetRemoteServiceAsync<TProxy>(typeof(TProxy).Name, CancellationToken.None);
-            }
+        internal string ConvertToLocalPath(Uri sharedUri)
+        {
+            return _session.ConvertSharedUriToLocalPath(sharedUri);
+        }
 
-            internal string ConvertToLocalPath(Uri sharedUri)
-            {
-                return _session.ConvertSharedUriToLocalPath(sharedUri);
-            }
-
-            internal Uri ConvertToSharedUri(string localPath)
-            {
-                return _session.ConvertLocalPathToSharedUri(localPath);
-            }
+        internal Uri ConvertToSharedUri(string localPath)
+        {
+            return _session.ConvertLocalPathToSharedUri(localPath);
         }
     }
 }

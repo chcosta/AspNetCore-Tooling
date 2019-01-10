@@ -10,6 +10,10 @@
   <PropertyGroup Condition="'$(IsUnitTestProject)' == ''">
     <IsUnitTestProject>false</IsUnitTestProject>
     <IsUnitTestProject Condition="$(MSBuildProjectName.EndsWith('.Test'))">true</IsUnitTestProject>
+    
+    
+    <!-- Use the RoslynDev Experimental instance so we can mingle with local builds of Roslyn -->
+    <VSSDKTargetPlatformRegRootSuffix>RoslynDev</VSSDKTargetPlatformRegRootSuffix>
   </PropertyGroup>
 
   <Import Project="Sdk.props" Sdk="Microsoft.DotNet.Arcade.Sdk" />

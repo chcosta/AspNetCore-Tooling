@@ -22,6 +22,8 @@ namespace Microsoft.VisualStudio.Editor.Razor
 
         public abstract IReadOnlyList<TagHelperDescriptor> TagHelpers { get; }
 
+        public abstract bool Subscribed { get; }
+
         public abstract bool IsSupportedProject { get; }
 
         public abstract string FilePath { get; }

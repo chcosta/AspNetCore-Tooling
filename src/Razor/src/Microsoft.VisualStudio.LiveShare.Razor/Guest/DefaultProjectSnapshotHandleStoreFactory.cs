@@ -14,16 +14,23 @@ namespace Microsoft.VisualStudio.LiveShare.Razor.Guest
     internal class DefaultProjectSnapshotHandleStoreFactory : ILanguageServiceFactory
     {
         private readonly ForegroundDispatcher _foregroundDispatcher;
+        private readonly ProxyAccessor _proxyAccessor;
         private readonly JoinableTaskContext _joinableTaskContext;
 
         [ImportingConstructor]
         public DefaultProjectSnapshotHandleStoreFactory(
             ForegroundDispatcher foregroundDispatcher,
+            ProxyAccessor proxyAccessor,
             JoinableTaskContext joinableTaskContext)
         {
             if (foregroundDispatcher == null)
             {
                 throw new ArgumentNullException(nameof(foregroundDispatcher));
+            }
+
+            if (proxyAccessor == null)
+            {
+                throw new ArgumentNullException(nameof(proxyAccessor));
             }
 
             if (joinableTaskContext == null)
@@ -32,6 +39,7 @@ namespace Microsoft.VisualStudio.LiveShare.Razor.Guest
             }
 
             _foregroundDispatcher = foregroundDispatcher;
+            _proxyAccessor = proxyAccessor;
             _joinableTaskContext = joinableTaskContext;
         }
 
@@ -42,12 +50,10 @@ namespace Microsoft.VisualStudio.LiveShare.Razor.Guest
                 throw new ArgumentNullException(nameof(languageServices));
             }
 
-            var proxyAccessor = languageServices.GetRequiredService<ProxyAccessor>();
-
             var snapshotStore = new DefaultProjectSnapshotHandleStore(
                 _foregroundDispatcher,
                 _joinableTaskContext.Factory,
-                proxyAccessor);
+                _proxyAccessor);
             snapshotStore.InitializeProjects();
 
             return snapshotStore;

@@ -2,6 +2,7 @@
 // Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information.
 
 using System;
+using System.ComponentModel.Composition;
 using System.Threading;
 using Microsoft.CodeAnalysis.Razor;
 using Microsoft.VisualStudio.Editor.Razor;
@@ -10,29 +11,34 @@ using Microsoft.VisualStudio.Threading;
 
 namespace Microsoft.VisualStudio.LiveShare.Razor.Guest
 {
-    internal class GuestProjectPathProvider : ProjectPathProvider
+    [System.Composition.Shared]
+    [Export(typeof(LiveShareProjectPathProvider))]
+    internal class GuestProjectPathProvider : LiveShareProjectPathProvider
     {
         private readonly ForegroundDispatcher _foregroundDispatcher;
         private readonly JoinableTaskFactory _joinableTaskFactory;
         private readonly ITextDocumentFactoryService _textDocumentFactory;
         private readonly ProxyAccessor _proxyAccessor;
         private readonly LiveShareClientProvider _liveShareClientProvider;
+        private readonly RazorGuestRemoteSessionDetector _guestRemoteSessionDetector;
 
+        [ImportingConstructor]
         public GuestProjectPathProvider(
             ForegroundDispatcher foregroundDispatcher,
-            JoinableTaskFactory joinableTaskFactory,
+            JoinableTaskContext joinableTaskContext,
             ITextDocumentFactoryService textDocumentFactory,
             ProxyAccessor proxyAccessor,
-            LiveShareClientProvider liveShareClientProvider)
+            LiveShareClientProvider liveShareClientProvider,
+            RazorGuestRemoteSessionDetector guestRemoteSessionDetector)
         {
             if (foregroundDispatcher == null)
             {
                 throw new ArgumentNullException(nameof(foregroundDispatcher));
             }
 
-            if (joinableTaskFactory == null)
+            if (joinableTaskContext == null)
             {
-                throw new ArgumentNullException(nameof(joinableTaskFactory));
+                throw new ArgumentNullException(nameof(joinableTaskContext));
             }
 
             if (textDocumentFactory == null)
@@ -50,15 +56,27 @@ namespace Microsoft.VisualStudio.LiveShare.Razor.Guest
                 throw new ArgumentNullException(nameof(liveShareClientProvider));
             }
 
+            if (guestRemoteSessionDetector == null)
+            {
+                throw new ArgumentNullException(nameof(guestRemoteSessionDetector));
+            }
+
             _foregroundDispatcher = foregroundDispatcher;
-            _joinableTaskFactory = joinableTaskFactory;
+            _joinableTaskFactory = joinableTaskContext.Factory;
             _textDocumentFactory = textDocumentFactory;
             _proxyAccessor = proxyAccessor;
             _liveShareClientProvider = liveShareClientProvider;
+            _guestRemoteSessionDetector = guestRemoteSessionDetector;
         }
 
         public override bool TryGetProjectPath(ITextBuffer textBuffer, out string filePath)
         {
+            if (!_guestRemoteSessionDetector.IsRemoteSession)
+            {
+                filePath = null;
+                return false;
+            }
+
             if (!_textDocumentFactory.TryGetTextDocument(textBuffer, out var textDocument))
             {
                 filePath = null;

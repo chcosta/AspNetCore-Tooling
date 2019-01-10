@@ -13,7 +13,7 @@ namespace Microsoft.VisualStudio.Editor.Razor
         public void TryGetProjectPath_ReturnsFalseIfNoProject()
         {
             // Arrange
-            var projectPathProvider = new DefaultProjectPathProvider(Mock.Of<TextBufferProjectService>());
+            var projectPathProvider = new DefaultProjectPathProvider(Mock.Of<TextBufferProjectService>(), null);
             var textBuffer = Mock.Of<ITextBuffer>();
 
             // Act
@@ -34,7 +34,7 @@ namespace Microsoft.VisualStudio.Editor.Razor
                 .Returns(new object());
             projectService.Setup(service => service.GetProjectPath(It.IsAny<object>()))
                 .Returns(expectedProjectPath);
-            var projectPathProvider = new DefaultProjectPathProvider(projectService.Object);
+            var projectPathProvider = new DefaultProjectPathProvider(projectService.Object, null);
             var textBuffer = Mock.Of<ITextBuffer>();
 
             // Act
