@@ -14,9 +14,9 @@ namespace Microsoft.CodeAnalysis.Razor
 {
     internal abstract class TagHelperResolver : ILanguageService
     {
-        public abstract Task<TagHelperResolutionResult> GetTagHelpersAsync(ProjectSnapshot project, CancellationToken cancellationToken = default);
+        public abstract Task<TagHelperResolutionResult> GetTagHelpersAsync(Project project, ProjectSnapshot projectSnapshot, CancellationToken cancellationToken = default);
 
-        protected virtual async Task<TagHelperResolutionResult> GetTagHelpersAsync(ProjectSnapshot project, RazorProjectEngine engine)
+        protected virtual async Task<TagHelperResolutionResult> GetTagHelpersAsync(Project project, RazorProjectEngine engine)
         {
             if (project == null)
             {
@@ -26,11 +26,6 @@ namespace Microsoft.CodeAnalysis.Razor
             if (engine == null)
             {
                 throw new ArgumentNullException(nameof(engine));
-            }
-
-            if (project.WorkspaceProject == null)
-            {
-                return TagHelperResolutionResult.Empty;
             }
 
             var providers = engine.Engine.Features.OfType<ITagHelperDescriptorProvider>().ToArray();
@@ -44,7 +39,7 @@ namespace Microsoft.CodeAnalysis.Razor
             context.ExcludeHidden = true;
             context.IncludeDocumentation = true;
 
-            var compilation = await project.WorkspaceProject.GetCompilationAsync().ConfigureAwait(false);
+            var compilation = await project.GetCompilationAsync().ConfigureAwait(false);
             if (CompilationTagHelperFeature.IsValidCompilation(compilation))
             {
                 context.SetCompilation(compilation);

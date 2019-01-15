@@ -137,7 +137,7 @@ namespace Microsoft.CodeAnalysis.Razor.ProjectSystem
             // Arrange
             var trigger = new WorkspaceProjectSnapshotChangeTrigger()
             {
-                ProjectChangeDelay = 50,
+                EnqueueDelay = 50,
             };
 
             var projectManager = new TestProjectSnapshotManager(new[] { trigger }, Workspace);

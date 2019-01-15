@@ -195,7 +195,7 @@ namespace Microsoft.CodeAnalysis.Razor.ProjectSystem
             return state;
         }
 
-        public virtual DocumentState WithWorkspaceProjectChange()
+        public virtual DocumentState WithChangedTagHelpers()
         {
             var state = new DocumentState(Services, HostDocument, _sourceText, _version, _loader);
 
@@ -323,7 +323,7 @@ namespace Microsoft.CodeAnalysis.Razor.ProjectSystem
                 // - This document
                 //
                 // All of these things are cached, so no work is wasted if we do need to generate the code.
-                var computedStateVersion = await project.State.GetComputedStateVersionAsync(project).ConfigureAwait(false);
+                var computedStateVersion = project.State.GetComputedStateVersion();
                 var documentCollectionVersion = project.State.DocumentCollectionVersion;
                 var imports = await GetImportsAsync(project, document).ConfigureAwait(false);
                 var documentVersion = await document.GetTextVersionAsync().ConfigureAwait(false);
@@ -369,7 +369,6 @@ namespace Microsoft.CodeAnalysis.Razor.ProjectSystem
                 }
 
                 // OK we have to generate the code.
-                var tagHelpers = await project.GetTagHelpersAsync().ConfigureAwait(false);
                 var importSources = new List<RazorSourceDocument>();
                 foreach (var item in imports)
                 {
@@ -381,7 +380,7 @@ namespace Microsoft.CodeAnalysis.Razor.ProjectSystem
 
                 var projectEngine = project.GetProjectEngine();
 
-                var codeDocument = projectEngine.ProcessDesignTime(documentSource, fileKind: document.FileKind, importSources, tagHelpers);
+                var codeDocument = projectEngine.ProcessDesignTime(documentSource, fileKind: document.FileKind, importSources, project.TagHelpers);
                 var csharpDocument = codeDocument.GetCSharpDocument();
 
                 // OK now we've generated the code. Let's check if the output is actually different. This is

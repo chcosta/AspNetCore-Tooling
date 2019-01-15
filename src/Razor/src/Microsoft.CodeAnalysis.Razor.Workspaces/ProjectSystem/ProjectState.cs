@@ -20,9 +20,7 @@ namespace Microsoft.CodeAnalysis.Razor.ProjectSystem
 
         private const ProjectDifference ClearCachedTagHelpersMask =
             ProjectDifference.ConfigurationChanged |
-            ProjectDifference.WorkspaceProjectAdded |
-            ProjectDifference.WorkspaceProjectChanged |
-            ProjectDifference.WorkspaceProjectRemoved;
+            ProjectDifference.TagHelpersChanged;
 
         private const ProjectDifference ClearDocumentCollectionVersionMask =
             ProjectDifference.ConfigurationChanged |
@@ -31,11 +29,15 @@ namespace Microsoft.CodeAnalysis.Razor.ProjectSystem
 
         private static readonly ImmutableDictionary<string, DocumentState> EmptyDocuments = ImmutableDictionary.Create<string, DocumentState>(FilePathComparer.Instance);
         private static readonly ImmutableDictionary<string, ImmutableArray<string>> EmptyImportsToRelatedDocuments = ImmutableDictionary.Create<string, ImmutableArray<string>>(FilePathComparer.Instance);
+        private static readonly IReadOnlyList<TagHelperDescriptor> EmptyTagHelpers = Array.Empty<TagHelperDescriptor>();
         private readonly object _lock;
 
         private ComputedStateTracker _computedState;
 
-        public static ProjectState Create(HostWorkspaceServices services, HostProject hostProject, Project workspaceProject = null)
+        public static ProjectState Create(
+            HostWorkspaceServices services,
+            HostProject hostProject,
+            IReadOnlyList<TagHelperDescriptor> tagHelpers = null)
         {
             if (services == null)
             {
@@ -47,17 +49,19 @@ namespace Microsoft.CodeAnalysis.Razor.ProjectSystem
                 throw new ArgumentNullException(nameof(hostProject));
             }
 
-            return new ProjectState(services, hostProject, workspaceProject);
+            tagHelpers = tagHelpers ?? EmptyTagHelpers;
+
+            return new ProjectState(services, hostProject, tagHelpers);
         }
 
         private ProjectState(
             HostWorkspaceServices services,
             HostProject hostProject,
-            Project workspaceProject)
+            IReadOnlyList<TagHelperDescriptor> tagHelpers)
         {
             Services = services;
             HostProject = hostProject;
-            WorkspaceProject = workspaceProject;
+            TagHelpers = tagHelpers;
             Documents = EmptyDocuments;
             ImportsToRelatedDocuments = EmptyImportsToRelatedDocuments;
             Version = VersionStamp.Create();
@@ -70,7 +74,7 @@ namespace Microsoft.CodeAnalysis.Razor.ProjectSystem
             ProjectState older,
             ProjectDifference difference,
             HostProject hostProject,
-            Project workspaceProject,
+            IReadOnlyList<TagHelperDescriptor> tagHelpers,
             ImmutableDictionary<string, DocumentState> documents,
             ImmutableDictionary<string, ImmutableArray<string>> importsToRelatedDocuments)
         {
@@ -98,7 +102,7 @@ namespace Microsoft.CodeAnalysis.Razor.ProjectSystem
             Version = older.Version.GetNewerVersion();
 
             HostProject = hostProject;
-            WorkspaceProject = workspaceProject;
+            TagHelpers = tagHelpers;
             Documents = documents;
             ImportsToRelatedDocuments = importsToRelatedDocuments;
 
@@ -137,7 +141,7 @@ namespace Microsoft.CodeAnalysis.Razor.ProjectSystem
 
         public HostWorkspaceServices Services { get; }
 
-        public Project WorkspaceProject { get; }
+        public IReadOnlyList<TagHelperDescriptor> TagHelpers { get; }
 
         /// <summary>
         /// Gets the version of this project, INCLUDING content changes. The <see cref="Version"/> is
@@ -181,26 +185,10 @@ namespace Microsoft.CodeAnalysis.Razor.ProjectSystem
         /// change.
         /// </summary>
         /// <returns>Asynchronously returns the computed version.</returns>
-        public async Task<VersionStamp> GetComputedStateVersionAsync(ProjectSnapshot snapshot)
+        public VersionStamp GetComputedStateVersion()
         {
-            if (snapshot == null)
-            {
-                throw new ArgumentNullException(nameof(snapshot));
-            }
-
-            var (_, version) = await ComputedState.GetTagHelpersAndVersionAsync(snapshot).ConfigureAwait(false);
+            var version = ComputedState.ProjectStateVersion;
             return version;
-        }
-
-        public async Task<IReadOnlyList<TagHelperDescriptor>> GetTagHelpersAsync(ProjectSnapshot snapshot)
-        {
-            if (snapshot == null)
-            {
-                throw new ArgumentNullException(nameof(snapshot));
-            }
-
-            var (tagHelpers, _) = await ComputedState.GetTagHelpersAndVersionAsync(snapshot).ConfigureAwait(false);
-            return tagHelpers;
         }
 
         public ProjectState WithAddedHostDocument(HostDocument hostDocument, Func<Task<TextAndVersion>> loader)
@@ -238,7 +226,7 @@ namespace Microsoft.CodeAnalysis.Razor.ProjectSystem
                 }
             }
 
-            var state = new ProjectState(this, ProjectDifference.DocumentAdded, HostProject, WorkspaceProject, documents, importsToRelatedDocuments);
+            var state = new ProjectState(this, ProjectDifference.DocumentAdded, HostProject, TagHelpers, documents, importsToRelatedDocuments);
             return state;
         }
 
@@ -270,7 +258,7 @@ namespace Microsoft.CodeAnalysis.Razor.ProjectSystem
             var importTargetPaths = GetImportDocumentTargetPaths(hostDocument.TargetPath);
             var importsToRelatedDocuments = RemoveFromImportsToRelatedDocuments(ImportsToRelatedDocuments, hostDocument, importTargetPaths);
 
-            var state = new ProjectState(this, ProjectDifference.DocumentRemoved, HostProject, WorkspaceProject, documents, importsToRelatedDocuments);
+            var state = new ProjectState(this, ProjectDifference.DocumentRemoved, HostProject, TagHelpers, documents, importsToRelatedDocuments);
             return state;
         }
 
@@ -296,7 +284,7 @@ namespace Microsoft.CodeAnalysis.Razor.ProjectSystem
                 }
             }
 
-            var state = new ProjectState(this, ProjectDifference.DocumentChanged, HostProject, WorkspaceProject, documents, ImportsToRelatedDocuments);
+            var state = new ProjectState(this, ProjectDifference.DocumentChanged, HostProject, TagHelpers, documents, ImportsToRelatedDocuments);
             return state;
         }
 
@@ -322,7 +310,7 @@ namespace Microsoft.CodeAnalysis.Razor.ProjectSystem
                 }
             }
 
-            var state = new ProjectState(this, ProjectDifference.DocumentChanged, HostProject, WorkspaceProject, documents, ImportsToRelatedDocuments);
+            var state = new ProjectState(this, ProjectDifference.DocumentChanged, HostProject, TagHelpers, documents, ImportsToRelatedDocuments);
             return state;
         }
 
@@ -349,35 +337,16 @@ namespace Microsoft.CodeAnalysis.Razor.ProjectSystem
                 importsToRelatedDocuments = AddToImportsToRelatedDocuments(ImportsToRelatedDocuments, document.Value.HostDocument, importTargetPaths);
             }
 
-            var state = new ProjectState(this, ProjectDifference.ConfigurationChanged, hostProject, WorkspaceProject, documents, importsToRelatedDocuments);
+            var state = new ProjectState(this, ProjectDifference.ConfigurationChanged, hostProject, TagHelpers, documents, importsToRelatedDocuments);
             return state;
         }
 
-        public ProjectState WithWorkspaceProject(Project workspaceProject)
+        public ProjectState WithChangedTagHelpers(IReadOnlyList<TagHelperDescriptor> tagHelpers)
         {
-            var difference = ProjectDifference.None;
-            if (WorkspaceProject == null && workspaceProject != null)
-            {
-                difference |= ProjectDifference.WorkspaceProjectAdded;
-            }
-            else if (WorkspaceProject != null && workspaceProject == null)
-            {
-                difference |= ProjectDifference.WorkspaceProjectRemoved;
-            }
-            else
-            {
-                // We always update the snapshot right now when the project changes. This is how
-                // we deal with changes to the content of C# sources.
-                difference |= ProjectDifference.WorkspaceProjectChanged;
-            }
+            var difference = ProjectDifference.TagHelpersChanged;
 
-            if (difference == ProjectDifference.None)
-            {
-                return this;
-            }
-
-            var documents = Documents.ToImmutableDictionary(kvp => kvp.Key, kvp => kvp.Value.WithWorkspaceProjectChange(), FilePathComparer.Instance);
-            var state = new ProjectState(this, difference, HostProject, workspaceProject, documents, ImportsToRelatedDocuments);
+            var documents = Documents.ToImmutableDictionary(kvp => kvp.Key, kvp => kvp.Value.WithChangedTagHelpers(), FilePathComparer.Instance);
+            var state = new ProjectState(this, difference, HostProject, tagHelpers, documents, ImportsToRelatedDocuments);
             return state;
         }
 
@@ -478,59 +447,7 @@ namespace Microsoft.CodeAnalysis.Razor.ProjectSystem
 
             public RazorProjectEngine ProjectEngine { get; }
 
-            public Task<(IReadOnlyList<TagHelperDescriptor>, VersionStamp)> GetTagHelpersAndVersionAsync(ProjectSnapshot snapshot)
-            {
-                if (TaskUnsafe == null)
-                {
-                    lock (_lock)
-                    {
-                        if (TaskUnsafe == null)
-                        {
-                            TaskUnsafe = GetTagHelpersAndVersionCoreAsync(snapshot);
-                        }
-                    }
-                }
-
-                return TaskUnsafe;
-            }
-
-            private async Task<(IReadOnlyList<TagHelperDescriptor>, VersionStamp)> GetTagHelpersAndVersionCoreAsync(ProjectSnapshot snapshot)
-            {
-                // Don't allow synchronous execution - we expect this to always be called with the lock.
-                await Task.Yield();
-
-                var services = ((DefaultProjectSnapshot)snapshot).State.Services;
-                var resolver = services.GetLanguageServices(RazorLanguage.Name).GetRequiredService<TagHelperResolver>();
-
-                var tagHelpers = (await resolver.GetTagHelpersAsync(snapshot).ConfigureAwait(false)).Descriptors;
-                if (_older?.TaskUnsafe != null)
-                {
-                    // We have something to diff against.
-                    var (olderTagHelpers, olderVersion) = await _older.TaskUnsafe.ConfigureAwait(false);
-
-                    var difference = new HashSet<TagHelperDescriptor>(TagHelperDescriptorComparer.Default);
-                    difference.UnionWith(olderTagHelpers);
-                    difference.SymmetricExceptWith(tagHelpers);
-
-                    if (difference.Count == 0)
-                    {
-                        lock (_lock)
-                        {
-
-                            // Everything is the same. Return the cached version.
-                            TaskUnsafe = _older.TaskUnsafe;
-                            _older = null;
-                            return (olderTagHelpers, olderVersion);
-                        }
-                    }
-                }
-
-                lock (_lock)
-                {
-                    _older = null;
-                    return (tagHelpers, _projectStateVersion);
-                }
-            }
+            public VersionStamp ProjectStateVersion => _projectStateVersion;
         }
     }
 }
