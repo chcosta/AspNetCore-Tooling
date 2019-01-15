@@ -31,7 +31,8 @@ Document -
                 IntermediateToken -  - CSharp - #pragma warning restore 0414
             MethodDeclaration -  - public async override - global::System.Threading.Tasks.Task - ExecuteAsync
                 HtmlContent - (0:0,0 [4] Basic.cshtml)
-                    IntermediateToken - (0:0,0 [4] Basic.cshtml) - Html - <div
+                    IntermediateToken - (0:0,0 [1] Basic.cshtml) - Html - <
+                    IntermediateToken - (1:0,1 [3] Basic.cshtml) - Html - div
                 HtmlAttribute - (4:0,4 [25] Basic.cshtml) -  class=" - "
                     CSharpExpressionAttributeValue - (12:0,12 [16] Basic.cshtml) - 
                         IntermediateToken - (13:0,13 [15] Basic.cshtml) - CSharp - this.ToString()
@@ -42,12 +43,16 @@ Document -
                     IntermediateToken - (54:2,5 [29] Basic.cshtml) - CSharp - string.Format("{0}", "Hello")
                 HtmlContent - (83:2,34 [10] Basic.cshtml)
                     IntermediateToken - (83:2,34 [2] Basic.cshtml) - Html - \n
-                    IntermediateToken - (85:3,0 [6] Basic.cshtml) - Html - </div>
+                    IntermediateToken - (85:3,0 [1] Basic.cshtml) - Html - <
+                    IntermediateToken - (86:3,1 [1] Basic.cshtml) - Html - /
+                    IntermediateToken - (87:3,2 [3] Basic.cshtml) - Html - div
+                    IntermediateToken - (90:3,5 [1] Basic.cshtml) - Html - >
                     IntermediateToken - (91:3,6 [2] Basic.cshtml) - Html - \n
                 CSharpCode - (95:4,2 [25] Basic.cshtml)
                     IntermediateToken - (95:4,2 [25] Basic.cshtml) - CSharp -  \n    var cls = "foo";\n
                 HtmlContent - (123:7,0 [2] Basic.cshtml)
-                    IntermediateToken - (123:7,0 [2] Basic.cshtml) - Html - <p
+                    IntermediateToken - (123:7,0 [1] Basic.cshtml) - Html - <
+                    IntermediateToken - (124:7,1 [1] Basic.cshtml) - Html - p
                 HtmlAttribute - (125:7,2 [34] Basic.cshtml) -  class=" - "
                     CSharpCodeAttributeValue - (133:7,10 [25] Basic.cshtml) - 
                         IntermediateToken - (134:7,11 [18] Basic.cshtml) - CSharp - if(cls != null) { 
@@ -56,7 +61,8 @@ Document -
                         IntermediateToken - (156:7,33 [2] Basic.cshtml) - CSharp -  }
                 HtmlContent - (159:7,36 [5] Basic.cshtml)
                     IntermediateToken - (159:7,36 [1] Basic.cshtml) - Html -  
-                    IntermediateToken - (160:7,37 [2] Basic.cshtml) - Html - />
+                    IntermediateToken - (160:7,37 [1] Basic.cshtml) - Html - /
+                    IntermediateToken - (161:7,38 [1] Basic.cshtml) - Html - >
                     IntermediateToken - (162:7,39 [2] Basic.cshtml) - Html - \n
             Inject - 
             Inject - 

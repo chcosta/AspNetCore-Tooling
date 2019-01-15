@@ -67,11 +67,15 @@ Document -
                     DefaultTagHelperExecute - 
                 HtmlContent - (191:5,47 [35] CssSelectorTagHelperAttributes.cshtml)
                     IntermediateToken - (191:5,47 [2] CssSelectorTagHelperAttributes.cshtml) - Html - \n
-                    IntermediateToken - (193:6,0 [2] CssSelectorTagHelperAttributes.cshtml) - Html - <a
+                    IntermediateToken - (193:6,0 [1] CssSelectorTagHelperAttributes.cshtml) - Html - <
+                    IntermediateToken - (194:6,1 [1] CssSelectorTagHelperAttributes.cshtml) - Html - a
                     IntermediateToken - (195:6,2 [11] CssSelectorTagHelperAttributes.cshtml) - Html -  href=' ~/'
                     IntermediateToken - (206:6,13 [1] CssSelectorTagHelperAttributes.cshtml) - Html - >
                     IntermediateToken - (207:6,14 [13] CssSelectorTagHelperAttributes.cshtml) - Html - 0 TagHelpers.
-                    IntermediateToken - (220:6,27 [4] CssSelectorTagHelperAttributes.cshtml) - Html - </a>
+                    IntermediateToken - (220:6,27 [1] CssSelectorTagHelperAttributes.cshtml) - Html - <
+                    IntermediateToken - (221:6,28 [1] CssSelectorTagHelperAttributes.cshtml) - Html - /
+                    IntermediateToken - (222:6,29 [1] CssSelectorTagHelperAttributes.cshtml) - Html - a
+                    IntermediateToken - (223:6,30 [1] CssSelectorTagHelperAttributes.cshtml) - Html - >
                     IntermediateToken - (224:6,31 [2] CssSelectorTagHelperAttributes.cshtml) - Html - \n
                 TagHelper - (226:7,0 [32] CssSelectorTagHelperAttributes.cshtml) - a - TagMode.StartTagAndEndTag
                     DefaultTagHelperBody - 

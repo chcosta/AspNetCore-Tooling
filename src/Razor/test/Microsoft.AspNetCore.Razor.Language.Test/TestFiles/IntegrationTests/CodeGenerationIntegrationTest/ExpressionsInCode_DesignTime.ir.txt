@@ -20,15 +20,20 @@ Document -
                 CSharpCode - (86:6,8 [16] ExpressionsInCode.cshtml)
                     IntermediateToken - (86:6,8 [16] ExpressionsInCode.cshtml) - CSharp - \n} else {\n    
                 HtmlContent - (102:8,4 [19] ExpressionsInCode.cshtml)
-                    IntermediateToken - (102:8,4 [2] ExpressionsInCode.cshtml) - Html - <p
+                    IntermediateToken - (102:8,4 [1] ExpressionsInCode.cshtml) - Html - <
+                    IntermediateToken - (103:8,5 [1] ExpressionsInCode.cshtml) - Html - p
                     IntermediateToken - (104:8,6 [1] ExpressionsInCode.cshtml) - Html - >
                     IntermediateToken - (105:8,7 [12] ExpressionsInCode.cshtml) - Html - Foo is Null!
-                    IntermediateToken - (117:8,19 [4] ExpressionsInCode.cshtml) - Html - </p>
+                    IntermediateToken - (117:8,19 [1] ExpressionsInCode.cshtml) - Html - <
+                    IntermediateToken - (118:8,20 [1] ExpressionsInCode.cshtml) - Html - /
+                    IntermediateToken - (119:8,21 [1] ExpressionsInCode.cshtml) - Html - p
+                    IntermediateToken - (120:8,22 [1] ExpressionsInCode.cshtml) - Html - >
                 CSharpCode - (121:8,23 [3] ExpressionsInCode.cshtml)
                     IntermediateToken - (121:8,23 [3] ExpressionsInCode.cshtml) - CSharp - \n}
                 HtmlContent - (124:9,1 [9] ExpressionsInCode.cshtml)
                     IntermediateToken - (124:9,1 [4] ExpressionsInCode.cshtml) - Html - \n\n
-                    IntermediateToken - (128:11,0 [2] ExpressionsInCode.cshtml) - Html - <p
+                    IntermediateToken - (128:11,0 [1] ExpressionsInCode.cshtml) - Html - <
+                    IntermediateToken - (129:11,1 [1] ExpressionsInCode.cshtml) - Html - p
                     IntermediateToken - (130:11,2 [1] ExpressionsInCode.cshtml) - Html - >
                     IntermediateToken - (131:11,3 [2] ExpressionsInCode.cshtml) - Html - \n
                 CSharpCode - (134:12,1 [38] ExpressionsInCode.cshtml)
@@ -39,4 +44,7 @@ Document -
                     IntermediateToken - (196:13,28 [3] ExpressionsInCode.cshtml) - CSharp - \n}
                 HtmlContent - (199:14,1 [6] ExpressionsInCode.cshtml)
                     IntermediateToken - (199:14,1 [2] ExpressionsInCode.cshtml) - Html - \n
-                    IntermediateToken - (201:15,0 [4] ExpressionsInCode.cshtml) - Html - </p>
+                    IntermediateToken - (201:15,0 [1] ExpressionsInCode.cshtml) - Html - <
+                    IntermediateToken - (202:15,1 [1] ExpressionsInCode.cshtml) - Html - /
+                    IntermediateToken - (203:15,2 [1] ExpressionsInCode.cshtml) - Html - p
+                    IntermediateToken - (204:15,3 [1] ExpressionsInCode.cshtml) - Html - >

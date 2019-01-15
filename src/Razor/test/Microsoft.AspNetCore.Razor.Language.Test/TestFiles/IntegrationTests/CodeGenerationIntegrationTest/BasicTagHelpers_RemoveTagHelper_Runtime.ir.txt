@@ -13,7 +13,8 @@ Document -
             MethodDeclaration -  - public async - System.Threading.Tasks.Task - ExecuteAsync
                 HtmlContent - (72:2,0 [49] BasicTagHelpers_RemoveTagHelper.cshtml)
                     IntermediateToken - (72:2,0 [2] BasicTagHelpers_RemoveTagHelper.cshtml) - Html - \n
-                    IntermediateToken - (74:3,0 [4] BasicTagHelpers_RemoveTagHelper.cshtml) - Html - <div
+                    IntermediateToken - (74:3,0 [1] BasicTagHelpers_RemoveTagHelper.cshtml) - Html - <
+                    IntermediateToken - (75:3,1 [3] BasicTagHelpers_RemoveTagHelper.cshtml) - Html - div
                     IntermediateToken - (78:3,4 [36] BasicTagHelpers_RemoveTagHelper.cshtml) - Html -  class="randomNonTagHelperAttribute"
                     IntermediateToken - (114:3,40 [1] BasicTagHelpers_RemoveTagHelper.cshtml) - Html - >
                     IntermediateToken - (115:3,41 [6] BasicTagHelpers_RemoveTagHelper.cshtml) - Html - \n    
@@ -52,4 +53,7 @@ Document -
                     DefaultTagHelperExecute - 
                 HtmlContent - (251:8,8 [8] BasicTagHelpers_RemoveTagHelper.cshtml)
                     IntermediateToken - (251:8,8 [2] BasicTagHelpers_RemoveTagHelper.cshtml) - Html - \n
-                    IntermediateToken - (253:9,0 [6] BasicTagHelpers_RemoveTagHelper.cshtml) - Html - </div>
+                    IntermediateToken - (253:9,0 [1] BasicTagHelpers_RemoveTagHelper.cshtml) - Html - <
+                    IntermediateToken - (254:9,1 [1] BasicTagHelpers_RemoveTagHelper.cshtml) - Html - /
+                    IntermediateToken - (255:9,2 [3] BasicTagHelpers_RemoveTagHelper.cshtml) - Html - div
+                    IntermediateToken - (258:9,5 [1] BasicTagHelpers_RemoveTagHelper.cshtml) - Html - >

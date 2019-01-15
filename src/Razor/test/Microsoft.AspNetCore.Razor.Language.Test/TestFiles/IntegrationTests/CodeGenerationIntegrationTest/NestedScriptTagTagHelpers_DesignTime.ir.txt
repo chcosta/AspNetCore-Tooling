@@ -16,11 +16,13 @@ Document -
             MethodDeclaration -  - public async - System.Threading.Tasks.Task - ExecuteAsync
                 HtmlContent - (31:0,31 [108] NestedScriptTagTagHelpers.cshtml)
                     IntermediateToken - (31:0,31 [4] NestedScriptTagTagHelpers.cshtml) - Html - \n\n
-                    IntermediateToken - (35:2,0 [7] NestedScriptTagTagHelpers.cshtml) - Html - <script
+                    IntermediateToken - (35:2,0 [1] NestedScriptTagTagHelpers.cshtml) - Html - <
+                    IntermediateToken - (36:2,1 [6] NestedScriptTagTagHelpers.cshtml) - Html - script
                     IntermediateToken - (42:2,7 [17] NestedScriptTagTagHelpers.cshtml) - Html -  type="text/html"
                     IntermediateToken - (59:2,24 [1] NestedScriptTagTagHelpers.cshtml) - Html - >
                     IntermediateToken - (60:2,25 [6] NestedScriptTagTagHelpers.cshtml) - Html - \n    
-                    IntermediateToken - (66:3,4 [4] NestedScriptTagTagHelpers.cshtml) - Html - <div
+                    IntermediateToken - (66:3,4 [1] NestedScriptTagTagHelpers.cshtml) - Html - <
+                    IntermediateToken - (67:3,5 [3] NestedScriptTagTagHelpers.cshtml) - Html - div
                     IntermediateToken - (70:3,8 [17] NestedScriptTagTagHelpers.cshtml) - Html -  data-animation="
                     IntermediateToken - (87:3,25 [4] NestedScriptTagTagHelpers.cshtml) - Html - fade
                     IntermediateToken - (91:3,29 [1] NestedScriptTagTagHelpers.cshtml) - Html - "
@@ -34,7 +36,8 @@ Document -
                         CSharpCode - (195:5,13 [46] NestedScriptTagTagHelpers.cshtml)
                             IntermediateToken - (195:5,13 [46] NestedScriptTagTagHelpers.cshtml) - CSharp - for(var i = 0; i < 5; i++) {\n                
                         HtmlContent - (241:6,16 [68] NestedScriptTagTagHelpers.cshtml)
-                            IntermediateToken - (241:6,16 [7] NestedScriptTagTagHelpers.cshtml) - Html - <script
+                            IntermediateToken - (241:6,16 [1] NestedScriptTagTagHelpers.cshtml) - Html - <
+                            IntermediateToken - (242:6,17 [6] NestedScriptTagTagHelpers.cshtml) - Html - script
                             IntermediateToken - (248:6,23 [21] NestedScriptTagTagHelpers.cshtml) - Html -  id="nestedScriptTag"
                             IntermediateToken - (269:6,44 [17] NestedScriptTagTagHelpers.cshtml) - Html -  type="text/html"
                             IntermediateToken - (286:6,61 [1] NestedScriptTagTagHelpers.cshtml) - Html - >
@@ -61,16 +64,23 @@ Document -
                             DefaultTagHelperExecute - 
                         HtmlContent - (395:7,106 [27] NestedScriptTagTagHelpers.cshtml)
                             IntermediateToken - (395:7,106 [18] NestedScriptTagTagHelpers.cshtml) - Html - \n                
-                            IntermediateToken - (413:8,16 [9] NestedScriptTagTagHelpers.cshtml) - Html - </script>
+                            IntermediateToken - (413:8,16 [1] NestedScriptTagTagHelpers.cshtml) - Html - <
+                            IntermediateToken - (414:8,17 [1] NestedScriptTagTagHelpers.cshtml) - Html - /
+                            IntermediateToken - (415:8,18 [6] NestedScriptTagTagHelpers.cshtml) - Html - script
+                            IntermediateToken - (421:8,24 [1] NestedScriptTagTagHelpers.cshtml) - Html - >
                         CSharpCode - (422:8,25 [15] NestedScriptTagTagHelpers.cshtml)
                             IntermediateToken - (422:8,25 [15] NestedScriptTagTagHelpers.cshtml) - CSharp - \n            }
                         HtmlContent - (437:9,13 [131] NestedScriptTagTagHelpers.cshtml)
                             IntermediateToken - (437:9,13 [14] NestedScriptTagTagHelpers.cshtml) - Html - \n            
-                            IntermediateToken - (451:10,12 [7] NestedScriptTagTagHelpers.cshtml) - Html - <script
+                            IntermediateToken - (451:10,12 [1] NestedScriptTagTagHelpers.cshtml) - Html - <
+                            IntermediateToken - (452:10,13 [6] NestedScriptTagTagHelpers.cshtml) - Html - script
                             IntermediateToken - (458:10,19 [23] NestedScriptTagTagHelpers.cshtml) - Html -  type="text/javascript"
                             IntermediateToken - (481:10,42 [1] NestedScriptTagTagHelpers.cshtml) - Html - >
                             IntermediateToken - (482:10,43 [67] NestedScriptTagTagHelpers.cshtml) - Html - \n                var tag = '<input checked="true">';\n            
-                            IntermediateToken - (549:12,12 [9] NestedScriptTagTagHelpers.cshtml) - Html - </script>
+                            IntermediateToken - (549:12,12 [1] NestedScriptTagTagHelpers.cshtml) - Html - <
+                            IntermediateToken - (550:12,13 [1] NestedScriptTagTagHelpers.cshtml) - Html - /
+                            IntermediateToken - (551:12,14 [6] NestedScriptTagTagHelpers.cshtml) - Html - script
+                            IntermediateToken - (557:12,20 [1] NestedScriptTagTagHelpers.cshtml) - Html - >
                             IntermediateToken - (558:12,21 [10] NestedScriptTagTagHelpers.cshtml) - Html - \n        
                     DefaultTagHelperCreate -  - TestNamespace.PTagHelper
                     DefaultTagHelperHtmlAttribute -  - class - HtmlAttributeValueStyle.DoubleQuotes
@@ -82,6 +92,12 @@ Document -
                     DefaultTagHelperExecute - 
                 HtmlContent - (572:13,12 [23] NestedScriptTagTagHelpers.cshtml)
                     IntermediateToken - (572:13,12 [6] NestedScriptTagTagHelpers.cshtml) - Html - \n    
-                    IntermediateToken - (578:14,4 [6] NestedScriptTagTagHelpers.cshtml) - Html - </div>
+                    IntermediateToken - (578:14,4 [1] NestedScriptTagTagHelpers.cshtml) - Html - <
+                    IntermediateToken - (579:14,5 [1] NestedScriptTagTagHelpers.cshtml) - Html - /
+                    IntermediateToken - (580:14,6 [3] NestedScriptTagTagHelpers.cshtml) - Html - div
+                    IntermediateToken - (583:14,9 [1] NestedScriptTagTagHelpers.cshtml) - Html - >
                     IntermediateToken - (584:14,10 [2] NestedScriptTagTagHelpers.cshtml) - Html - \n
-                    IntermediateToken - (586:15,0 [9] NestedScriptTagTagHelpers.cshtml) - Html - </script>
+                    IntermediateToken - (586:15,0 [1] NestedScriptTagTagHelpers.cshtml) - Html - <
+                    IntermediateToken - (587:15,1 [1] NestedScriptTagTagHelpers.cshtml) - Html - /
+                    IntermediateToken - (588:15,2 [6] NestedScriptTagTagHelpers.cshtml) - Html - script
+                    IntermediateToken - (594:15,8 [1] NestedScriptTagTagHelpers.cshtml) - Html - >

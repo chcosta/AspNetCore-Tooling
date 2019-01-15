@@ -26,12 +26,16 @@ Document -
                             TagHelper - (400:15,13 [82] TagHelpersWithTemplate.cshtml) - div - TagMode.StartTagAndEndTag
                                 DefaultTagHelperBody - 
                                     HtmlContent - (422:15,35 [4] TagHelpersWithTemplate.cshtml)
-                                        IntermediateToken - (422:15,35 [3] TagHelpersWithTemplate.cshtml) - Html - <h3
+                                        IntermediateToken - (422:15,35 [1] TagHelpersWithTemplate.cshtml) - Html - <
+                                        IntermediateToken - (423:15,36 [2] TagHelpersWithTemplate.cshtml) - Html - h3
                                         IntermediateToken - (425:15,38 [1] TagHelpersWithTemplate.cshtml) - Html - >
                                     CSharpExpression - (427:15,40 [4] TagHelpersWithTemplate.cshtml)
                                         IntermediateToken - (427:15,40 [4] TagHelpersWithTemplate.cshtml) - CSharp - item
                                     HtmlContent - (431:15,44 [5] TagHelpersWithTemplate.cshtml)
-                                        IntermediateToken - (431:15,44 [5] TagHelpersWithTemplate.cshtml) - Html - </h3>
+                                        IntermediateToken - (431:15,44 [1] TagHelpersWithTemplate.cshtml) - Html - <
+                                        IntermediateToken - (432:15,45 [1] TagHelpersWithTemplate.cshtml) - Html - /
+                                        IntermediateToken - (433:15,46 [2] TagHelpersWithTemplate.cshtml) - Html - h3
+                                        IntermediateToken - (435:15,48 [1] TagHelpersWithTemplate.cshtml) - Html - >
                                     TagHelper - (436:15,49 [40] TagHelpersWithTemplate.cshtml) - input - TagMode.SelfClosing
                                         DefaultTagHelperBody - 
                                         DefaultTagHelperCreate -  - InputTagHelper

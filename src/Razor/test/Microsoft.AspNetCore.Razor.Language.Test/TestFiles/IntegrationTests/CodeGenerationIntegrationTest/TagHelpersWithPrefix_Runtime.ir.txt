@@ -8,7 +8,8 @@ Document -
             FieldDeclaration -  - private - global::InputTagHelper - __InputTagHelper
             MethodDeclaration -  - public async - System.Threading.Tasks.Task - ExecuteAsync
                 HtmlContent - (55:2,0 [12] TagHelpersWithPrefix.cshtml)
-                    IntermediateToken - (55:2,0 [5] TagHelpersWithPrefix.cshtml) - Html - <form
+                    IntermediateToken - (55:2,0 [1] TagHelpersWithPrefix.cshtml) - Html - <
+                    IntermediateToken - (56:2,1 [4] TagHelpersWithPrefix.cshtml) - Html - form
                     IntermediateToken - (60:2,5 [1] TagHelpersWithPrefix.cshtml) - Html - >
                     IntermediateToken - (61:2,6 [6] TagHelpersWithPrefix.cshtml) - Html - \n    
                 TagHelper - (67:3,4 [39] TagHelpersWithPrefix.cshtml) - input - TagMode.SelfClosing
@@ -21,4 +22,7 @@ Document -
                     DefaultTagHelperExecute - 
                 HtmlContent - (106:3,43 [9] TagHelpersWithPrefix.cshtml)
                     IntermediateToken - (106:3,43 [2] TagHelpersWithPrefix.cshtml) - Html - \n
-                    IntermediateToken - (108:4,0 [7] TagHelpersWithPrefix.cshtml) - Html - </form>
+                    IntermediateToken - (108:4,0 [1] TagHelpersWithPrefix.cshtml) - Html - <
+                    IntermediateToken - (109:4,1 [1] TagHelpersWithPrefix.cshtml) - Html - /
+                    IntermediateToken - (110:4,2 [4] TagHelpersWithPrefix.cshtml) - Html - form
+                    IntermediateToken - (114:4,6 [1] TagHelpersWithPrefix.cshtml) - Html - >

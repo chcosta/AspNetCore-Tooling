@@ -19,7 +19,8 @@ Document -
                 CSharpCode - (36:2,1 [52] ComplexTagHelpers.cshtml)
                     IntermediateToken - (36:2,1 [52] ComplexTagHelpers.cshtml) - CSharp - if (true)\n{\n    var checkbox = "checkbox";\n\n    
                 HtmlContent - (88:6,4 [51] ComplexTagHelpers.cshtml)
-                    IntermediateToken - (88:6,4 [4] ComplexTagHelpers.cshtml) - Html - <div
+                    IntermediateToken - (88:6,4 [1] ComplexTagHelpers.cshtml) - Html - <
+                    IntermediateToken - (89:6,5 [3] ComplexTagHelpers.cshtml) - Html - div
                     IntermediateToken - (92:6,8 [36] ComplexTagHelpers.cshtml) - Html -  class="randomNonTagHelperAttribute"
                     IntermediateToken - (128:6,44 [1] ComplexTagHelpers.cshtml) - Html - >
                     IntermediateToken - (129:6,45 [10] ComplexTagHelpers.cshtml) - Html - \n        
@@ -46,10 +47,14 @@ Document -
                     DefaultTagHelperBody - 
                         HtmlContent - (226:8,46 [46] ComplexTagHelpers.cshtml)
                             IntermediateToken - (226:8,46 [14] ComplexTagHelpers.cshtml) - Html - \n            
-                            IntermediateToken - (240:9,12 [3] ComplexTagHelpers.cshtml) - Html - <h1
+                            IntermediateToken - (240:9,12 [1] ComplexTagHelpers.cshtml) - Html - <
+                            IntermediateToken - (241:9,13 [2] ComplexTagHelpers.cshtml) - Html - h1
                             IntermediateToken - (243:9,15 [1] ComplexTagHelpers.cshtml) - Html - >
                             IntermediateToken - (244:9,16 [9] ComplexTagHelpers.cshtml) - Html - Set Time:
-                            IntermediateToken - (253:9,25 [5] ComplexTagHelpers.cshtml) - Html - </h1>
+                            IntermediateToken - (253:9,25 [1] ComplexTagHelpers.cshtml) - Html - <
+                            IntermediateToken - (254:9,26 [1] ComplexTagHelpers.cshtml) - Html - /
+                            IntermediateToken - (255:9,27 [2] ComplexTagHelpers.cshtml) - Html - h1
+                            IntermediateToken - (257:9,29 [1] ComplexTagHelpers.cshtml) - Html - >
                             IntermediateToken - (258:9,30 [14] ComplexTagHelpers.cshtml) - Html - \n            
                         CSharpCode - (273:10,13 [43] ComplexTagHelpers.cshtml)
                             IntermediateToken - (273:10,13 [43] ComplexTagHelpers.cshtml) - CSharp - if (false)\n            {\n                
@@ -294,6 +299,9 @@ Document -
                     IntermediateToken - (1424:34,78 [1] ComplexTagHelpers.cshtml) - CSharp - )
                 HtmlContent - (1425:34,79 [12] ComplexTagHelpers.cshtml)
                     IntermediateToken - (1425:34,79 [6] ComplexTagHelpers.cshtml) - Html - \n    
-                    IntermediateToken - (1431:35,4 [6] ComplexTagHelpers.cshtml) - Html - </div>
+                    IntermediateToken - (1431:35,4 [1] ComplexTagHelpers.cshtml) - Html - <
+                    IntermediateToken - (1432:35,5 [1] ComplexTagHelpers.cshtml) - Html - /
+                    IntermediateToken - (1433:35,6 [3] ComplexTagHelpers.cshtml) - Html - div
+                    IntermediateToken - (1436:35,9 [1] ComplexTagHelpers.cshtml) - Html - >
                 CSharpCode - (1437:35,10 [3] ComplexTagHelpers.cshtml)
                     IntermediateToken - (1437:35,10 [3] ComplexTagHelpers.cshtml) - CSharp - \n}

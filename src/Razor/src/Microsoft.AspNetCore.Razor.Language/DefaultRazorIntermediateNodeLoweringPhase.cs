@@ -751,7 +751,6 @@ namespace Microsoft.AspNetCore.Razor.Language
                 var context = node.GetSpanContext();
                 if (context != null && context.ChunkGenerator == SpanChunkGenerator.Null)
                 {
-                    base.VisitMarkupTextLiteral(node);
                     return;
                 }
 
@@ -763,9 +762,53 @@ namespace Microsoft.AspNetCore.Razor.Language
                         token.Content.Length == 0)
                     {
                         // We don't want to create IR nodes for marker tokens.
-                        base.VisitMarkupTextLiteral(node);
                         return;
                     }
+                }
+
+                VisitHtmlContent(node);
+            }
+
+            public override void VisitMarkupStartTag(MarkupStartTagSyntax node)
+            {
+                if (node.IsMarkupTransition)
+                {
+                    // No need to visit <text> tags.
+                    return;
+                }
+
+                VisitHtmlContent(node.OpenAngle);
+                VisitHtmlContent(node.Bang);
+                VisitHtmlContent(node.Name);
+                foreach (var child in node.Attributes)
+                {
+                    Visit(child);
+                }
+                VisitHtmlContent(node.ForwardSlash);
+                VisitHtmlContent(node.CloseAngle);
+            }
+
+            public override void VisitMarkupEndTag(MarkupEndTagSyntax node)
+            {
+                if (node.IsMarkupTransition)
+                {
+                    // No need to visit </text> tags.
+                    return;
+                }
+
+                VisitHtmlContent(node.OpenAngle);
+                VisitHtmlContent(node.ForwardSlash);
+                VisitHtmlContent(node.Bang);
+                VisitHtmlContent(node.Name);
+                Visit(node.MiscAttributeContent);
+                VisitHtmlContent(node.CloseAngle);
+            }
+
+            private void VisitHtmlContent(SyntaxNode node)
+            {
+                if (node == null || (node is SyntaxToken token && token.IsMissing))
+                {
+                    return;
                 }
 
                 var source = BuildSourceSpanFromNode(node);
@@ -777,7 +820,6 @@ namespace Microsoft.AspNetCore.Razor.Language
                     if (existingHtmlContent.Source == null && source == null)
                     {
                         Combine(existingHtmlContent, node);
-                        base.VisitMarkupTextLiteral(node);
                         return;
                     }
 
@@ -787,7 +829,6 @@ namespace Microsoft.AspNetCore.Razor.Language
                         existingHtmlContent.Source.Value.AbsoluteIndex + existingHtmlContent.Source.Value.Length == source.Value.AbsoluteIndex)
                     {
                         Combine(existingHtmlContent, node);
-                        base.VisitMarkupTextLiteral(node);
                         return;
                     }
                 }
@@ -806,24 +847,6 @@ namespace Microsoft.AspNetCore.Razor.Language
                 });
 
                 _builder.Pop();
-
-                base.VisitMarkupTextLiteral(node);
-            }
-
-            public override void VisitMarkupStartTag(MarkupStartTagSyntax node)
-            {
-                foreach (var child in node.Children)
-                {
-                    Visit(child);
-                }
-            }
-
-            public override void VisitMarkupEndTag(MarkupEndTagSyntax node)
-            {
-                foreach (var child in node.Children)
-                {
-                    Visit(child);
-                }
             }
 
             public override void VisitMarkupTagHelperElement(MarkupTagHelperElementSyntax node)
@@ -1140,7 +1163,7 @@ namespace Microsoft.AspNetCore.Razor.Language
                 // just process the attributes.
                 //
                 // Visit the attributes
-                foreach (var block in node.Children)
+                foreach (var block in node.Attributes)
                 {
                     if (block is MarkupAttributeBlockSyntax attribute)
                     {

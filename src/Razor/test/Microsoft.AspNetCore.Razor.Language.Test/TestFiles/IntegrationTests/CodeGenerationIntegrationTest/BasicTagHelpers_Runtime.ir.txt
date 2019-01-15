@@ -15,7 +15,8 @@ Document -
             MethodDeclaration -  - public async - System.Threading.Tasks.Task - ExecuteAsync
                 HtmlContent - (33:1,0 [71] BasicTagHelpers.cshtml)
                     IntermediateToken - (33:1,0 [2] BasicTagHelpers.cshtml) - Html - \n
-                    IntermediateToken - (35:2,0 [4] BasicTagHelpers.cshtml) - Html - <div
+                    IntermediateToken - (35:2,0 [1] BasicTagHelpers.cshtml) - Html - <
+                    IntermediateToken - (36:2,1 [3] BasicTagHelpers.cshtml) - Html - div
                     IntermediateToken - (39:2,4 [17] BasicTagHelpers.cshtml) - Html -  data-animation="
                     IntermediateToken - (56:2,21 [4] BasicTagHelpers.cshtml) - Html - fade
                     IntermediateToken - (60:2,25 [1] BasicTagHelpers.cshtml) - Html - "
@@ -66,4 +67,7 @@ Document -
                     DefaultTagHelperExecute - 
                 HtmlContent - (320:7,8 [8] BasicTagHelpers.cshtml)
                     IntermediateToken - (320:7,8 [2] BasicTagHelpers.cshtml) - Html - \n
-                    IntermediateToken - (322:8,0 [6] BasicTagHelpers.cshtml) - Html - </div>
+                    IntermediateToken - (322:8,0 [1] BasicTagHelpers.cshtml) - Html - <
+                    IntermediateToken - (323:8,1 [1] BasicTagHelpers.cshtml) - Html - /
+                    IntermediateToken - (324:8,2 [3] BasicTagHelpers.cshtml) - Html - div
+                    IntermediateToken - (327:8,5 [1] BasicTagHelpers.cshtml) - Html - >

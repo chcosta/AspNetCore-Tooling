@@ -12,7 +12,8 @@ Document -
             MethodDeclaration -  - public async - System.Threading.Tasks.Task - ExecuteAsync
                 HtmlContent - (57:2,0 [52] BasicTagHelpers_Prefixed.cshtml)
                     IntermediateToken - (57:2,0 [2] BasicTagHelpers_Prefixed.cshtml) - Html - \n
-                    IntermediateToken - (59:3,0 [7] BasicTagHelpers_Prefixed.cshtml) - Html - <THSdiv
+                    IntermediateToken - (59:3,0 [1] BasicTagHelpers_Prefixed.cshtml) - Html - <
+                    IntermediateToken - (60:3,1 [6] BasicTagHelpers_Prefixed.cshtml) - Html - THSdiv
                     IntermediateToken - (66:3,7 [36] BasicTagHelpers_Prefixed.cshtml) - Html -  class="randomNonTagHelperAttribute"
                     IntermediateToken - (102:3,43 [1] BasicTagHelpers_Prefixed.cshtml) - Html - >
                     IntermediateToken - (103:3,44 [6] BasicTagHelpers_Prefixed.cshtml) - Html - \n    
@@ -20,11 +21,16 @@ Document -
                     DefaultTagHelperBody - 
                         HtmlContent - (135:4,30 [56] BasicTagHelpers_Prefixed.cshtml)
                             IntermediateToken - (135:4,30 [10] BasicTagHelpers_Prefixed.cshtml) - Html - \n        
-                            IntermediateToken - (145:5,8 [2] BasicTagHelpers_Prefixed.cshtml) - Html - <p
+                            IntermediateToken - (145:5,8 [1] BasicTagHelpers_Prefixed.cshtml) - Html - <
+                            IntermediateToken - (146:5,9 [1] BasicTagHelpers_Prefixed.cshtml) - Html - p
                             IntermediateToken - (147:5,10 [1] BasicTagHelpers_Prefixed.cshtml) - Html - >
-                            IntermediateToken - (148:5,11 [4] BasicTagHelpers_Prefixed.cshtml) - Html - </p>
+                            IntermediateToken - (148:5,11 [1] BasicTagHelpers_Prefixed.cshtml) - Html - <
+                            IntermediateToken - (149:5,12 [1] BasicTagHelpers_Prefixed.cshtml) - Html - /
+                            IntermediateToken - (150:5,13 [1] BasicTagHelpers_Prefixed.cshtml) - Html - p
+                            IntermediateToken - (151:5,14 [1] BasicTagHelpers_Prefixed.cshtml) - Html - >
                             IntermediateToken - (152:5,15 [10] BasicTagHelpers_Prefixed.cshtml) - Html - \n        
-                            IntermediateToken - (162:6,8 [6] BasicTagHelpers_Prefixed.cshtml) - Html - <input
+                            IntermediateToken - (162:6,8 [1] BasicTagHelpers_Prefixed.cshtml) - Html - <
+                            IntermediateToken - (163:6,9 [5] BasicTagHelpers_Prefixed.cshtml) - Html - input
                             IntermediateToken - (168:6,14 [12] BasicTagHelpers_Prefixed.cshtml) - Html -  type="text"
                             IntermediateToken - (180:6,26 [1] BasicTagHelpers_Prefixed.cshtml) - Html - >
                             IntermediateToken - (181:6,27 [10] BasicTagHelpers_Prefixed.cshtml) - Html - \n        
@@ -44,4 +50,7 @@ Document -
                     DefaultTagHelperExecute - 
                 HtmlContent - (245:8,11 [11] BasicTagHelpers_Prefixed.cshtml)
                     IntermediateToken - (245:8,11 [2] BasicTagHelpers_Prefixed.cshtml) - Html - \n
-                    IntermediateToken - (247:9,0 [9] BasicTagHelpers_Prefixed.cshtml) - Html - </THSdiv>
+                    IntermediateToken - (247:9,0 [1] BasicTagHelpers_Prefixed.cshtml) - Html - <
+                    IntermediateToken - (248:9,1 [1] BasicTagHelpers_Prefixed.cshtml) - Html - /
+                    IntermediateToken - (249:9,2 [6] BasicTagHelpers_Prefixed.cshtml) - Html - THSdiv
+                    IntermediateToken - (255:9,8 [1] BasicTagHelpers_Prefixed.cshtml) - Html - >

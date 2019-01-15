@@ -5,7 +5,8 @@ Document -
         ClassDeclaration -  - public - TestFiles_IntegrationTests_CodeGenerationIntegrationTest_CSharp7_Runtime -  - 
             MethodDeclaration -  - public async - System.Threading.Tasks.Task - ExecuteAsync
                 HtmlContent - (0:0,0 [8] CSharp7.cshtml)
-                    IntermediateToken - (0:0,0 [5] CSharp7.cshtml) - Html - <body
+                    IntermediateToken - (0:0,0 [1] CSharp7.cshtml) - Html - <
+                    IntermediateToken - (1:0,1 [4] CSharp7.cshtml) - Html - body
                     IntermediateToken - (5:0,5 [1] CSharp7.cshtml) - Html - >
                     IntermediateToken - (6:0,6 [2] CSharp7.cshtml) - Html - \n
                 CSharpCode - (8:1,0 [4] CSharp7.cshtml)
@@ -22,16 +23,21 @@ Document -
                     IntermediateToken - (509:15,5 [161] CSharp7.cshtml) - CSharp - if (nameLookup.TryGetValue("John Doe", out var entry))\n    {\n        if (entry.Extra is bool alive)\n        {\n            // Do Something\n        }\n    }\n
                 HtmlContent - (670:22,0 [46] CSharp7.cshtml)
                     IntermediateToken - (670:22,0 [4] CSharp7.cshtml) - Html -     
-                    IntermediateToken - (674:22,4 [2] CSharp7.cshtml) - Html - <p
+                    IntermediateToken - (674:22,4 [1] CSharp7.cshtml) - Html - <
+                    IntermediateToken - (675:22,5 [1] CSharp7.cshtml) - Html - p
                     IntermediateToken - (676:22,6 [1] CSharp7.cshtml) - Html - >
                     IntermediateToken - (677:22,7 [39] CSharp7.cshtml) - Html - \n        Here's a very unique number: 
                 CSharpExpression - (718:23,39 [62] CSharp7.cshtml)
                     IntermediateToken - (718:23,39 [62] CSharp7.cshtml) - CSharp - 1.618_033_988_749_894_848_204_586_834_365_638_117_720_309_179M
                 HtmlContent - (781:23,102 [33] CSharp7.cshtml)
                     IntermediateToken - (781:23,102 [6] CSharp7.cshtml) - Html - \n    
-                    IntermediateToken - (787:24,4 [4] CSharp7.cshtml) - Html - </p>
+                    IntermediateToken - (787:24,4 [1] CSharp7.cshtml) - Html - <
+                    IntermediateToken - (788:24,5 [1] CSharp7.cshtml) - Html - /
+                    IntermediateToken - (789:24,6 [1] CSharp7.cshtml) - Html - p
+                    IntermediateToken - (790:24,7 [1] CSharp7.cshtml) - Html - >
                     IntermediateToken - (791:24,8 [8] CSharp7.cshtml) - Html - \n\n    
-                    IntermediateToken - (799:26,4 [4] CSharp7.cshtml) - Html - <div
+                    IntermediateToken - (799:26,4 [1] CSharp7.cshtml) - Html - <
+                    IntermediateToken - (800:26,5 [3] CSharp7.cshtml) - Html - div
                     IntermediateToken - (803:26,8 [1] CSharp7.cshtml) - Html - >
                     IntermediateToken - (804:26,9 [2] CSharp7.cshtml) - Html - \n
                     IntermediateToken - (806:27,0 [8] CSharp7.cshtml) - Html -         
@@ -41,11 +47,17 @@ Document -
                     IntermediateToken - (851:27,45 [1] CSharp7.cshtml) - Html -  
                 HtmlContent - (870:27,64 [16] CSharp7.cshtml)
                     IntermediateToken - (870:27,64 [6] CSharp7.cshtml) - Html - \n    
-                    IntermediateToken - (876:28,4 [6] CSharp7.cshtml) - Html - </div>
+                    IntermediateToken - (876:28,4 [1] CSharp7.cshtml) - Html - <
+                    IntermediateToken - (877:28,5 [1] CSharp7.cshtml) - Html - /
+                    IntermediateToken - (878:28,6 [3] CSharp7.cshtml) - Html - div
+                    IntermediateToken - (881:28,9 [1] CSharp7.cshtml) - Html - >
                     IntermediateToken - (882:28,10 [4] CSharp7.cshtml) - Html - \n\n
                 CSharpCode - (886:30,0 [4] CSharp7.cshtml)
                     IntermediateToken - (886:30,0 [4] CSharp7.cshtml) - CSharp -     
                 CSharpCode - (891:30,5 [293] CSharp7.cshtml)
                     IntermediateToken - (891:30,5 [293] CSharp7.cshtml) - CSharp - switch (entry.Extra)\n    {\n        case int age:\n            // Do something\n            break;\n        case IEnumerable<string> childrenNames:\n            // Do more something\n            break;\n        case null:\n            // Do even more of something\n            break;\n    }\n
                 HtmlContent - (1184:42,0 [7] CSharp7.cshtml)
-                    IntermediateToken - (1184:42,0 [7] CSharp7.cshtml) - Html - </body>
+                    IntermediateToken - (1184:42,0 [1] CSharp7.cshtml) - Html - <
+                    IntermediateToken - (1185:42,1 [1] CSharp7.cshtml) - Html - /
+                    IntermediateToken - (1186:42,2 [4] CSharp7.cshtml) - Html - body
+                    IntermediateToken - (1190:42,6 [1] CSharp7.cshtml) - Html - >

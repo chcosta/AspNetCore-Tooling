@@ -16,10 +16,14 @@ Document -
                 CSharpCode - 
                     IntermediateToken -  - CSharp - BeginContext(0, 28, true);
                 HtmlContent - (0:0,0 [28] RazorPageWithNoLeadingPageDirective.cshtml)
-                    IntermediateToken - (0:0,0 [4] RazorPageWithNoLeadingPageDirective.cshtml) - Html - <div
+                    IntermediateToken - (0:0,0 [1] RazorPageWithNoLeadingPageDirective.cshtml) - Html - <
+                    IntermediateToken - (1:0,1 [3] RazorPageWithNoLeadingPageDirective.cshtml) - Html - div
                     IntermediateToken - (4:0,4 [1] RazorPageWithNoLeadingPageDirective.cshtml) - Html - >
                     IntermediateToken - (5:0,5 [15] RazorPageWithNoLeadingPageDirective.cshtml) - Html - Some text here.
-                    IntermediateToken - (20:0,20 [6] RazorPageWithNoLeadingPageDirective.cshtml) - Html - </div>
+                    IntermediateToken - (20:0,20 [1] RazorPageWithNoLeadingPageDirective.cshtml) - Html - <
+                    IntermediateToken - (21:0,21 [1] RazorPageWithNoLeadingPageDirective.cshtml) - Html - /
+                    IntermediateToken - (22:0,22 [3] RazorPageWithNoLeadingPageDirective.cshtml) - Html - div
+                    IntermediateToken - (25:0,25 [1] RazorPageWithNoLeadingPageDirective.cshtml) - Html - >
                     IntermediateToken - (26:0,26 [2] RazorPageWithNoLeadingPageDirective.cshtml) - Html - \n
                 CSharpCode - 
                     IntermediateToken -  - CSharp - EndContext();

@@ -12,13 +12,17 @@ Document -
                     IntermediateToken - (26:4,1 [18] Blocks.cshtml) - CSharp - while(i <= 10) {\n
                 HtmlContent - (44:5,0 [23] Blocks.cshtml)
                     IntermediateToken - (44:5,0 [4] Blocks.cshtml) - Html -     
-                    IntermediateToken - (48:5,4 [2] Blocks.cshtml) - Html - <p
+                    IntermediateToken - (48:5,4 [1] Blocks.cshtml) - Html - <
+                    IntermediateToken - (49:5,5 [1] Blocks.cshtml) - Html - p
                     IntermediateToken - (50:5,6 [1] Blocks.cshtml) - Html - >
                     IntermediateToken - (51:5,7 [16] Blocks.cshtml) - Html - Hello from C#, #
                 CSharpExpression - (69:5,25 [1] Blocks.cshtml)
                     IntermediateToken - (69:5,25 [1] Blocks.cshtml) - CSharp - i
                 HtmlContent - (71:5,27 [6] Blocks.cshtml)
-                    IntermediateToken - (71:5,27 [4] Blocks.cshtml) - Html - </p>
+                    IntermediateToken - (71:5,27 [1] Blocks.cshtml) - Html - <
+                    IntermediateToken - (72:5,28 [1] Blocks.cshtml) - Html - /
+                    IntermediateToken - (73:5,29 [1] Blocks.cshtml) - Html - p
+                    IntermediateToken - (74:5,30 [1] Blocks.cshtml) - Html - >
                     IntermediateToken - (75:5,31 [2] Blocks.cshtml) - Html - \n
                 CSharpCode - (77:6,0 [16] Blocks.cshtml)
                     IntermediateToken - (77:6,0 [16] Blocks.cshtml) - CSharp -     i += 1;\n}\n
@@ -28,10 +32,14 @@ Document -
                     IntermediateToken - (96:9,1 [15] Blocks.cshtml) - CSharp - if(i == 11) {\n
                 HtmlContent - (111:10,0 [31] Blocks.cshtml)
                     IntermediateToken - (111:10,0 [4] Blocks.cshtml) - Html -     
-                    IntermediateToken - (115:10,4 [2] Blocks.cshtml) - Html - <p
+                    IntermediateToken - (115:10,4 [1] Blocks.cshtml) - Html - <
+                    IntermediateToken - (116:10,5 [1] Blocks.cshtml) - Html - p
                     IntermediateToken - (117:10,6 [1] Blocks.cshtml) - Html - >
                     IntermediateToken - (118:10,7 [18] Blocks.cshtml) - Html - We wrote 10 lines!
-                    IntermediateToken - (136:10,25 [4] Blocks.cshtml) - Html - </p>
+                    IntermediateToken - (136:10,25 [1] Blocks.cshtml) - Html - <
+                    IntermediateToken - (137:10,26 [1] Blocks.cshtml) - Html - /
+                    IntermediateToken - (138:10,27 [1] Blocks.cshtml) - Html - p
+                    IntermediateToken - (139:10,28 [1] Blocks.cshtml) - Html - >
                     IntermediateToken - (140:10,29 [2] Blocks.cshtml) - Html - \n
                 CSharpCode - (142:11,0 [3] Blocks.cshtml)
                     IntermediateToken - (142:11,0 [3] Blocks.cshtml) - CSharp - }\n
@@ -41,19 +49,27 @@ Document -
                     IntermediateToken - (148:13,1 [27] Blocks.cshtml) - CSharp - switch(i) {\n    case 11:\n
                 HtmlContent - (175:15,0 [46] Blocks.cshtml)
                     IntermediateToken - (175:15,0 [8] Blocks.cshtml) - Html -         
-                    IntermediateToken - (183:15,8 [2] Blocks.cshtml) - Html - <p
+                    IntermediateToken - (183:15,8 [1] Blocks.cshtml) - Html - <
+                    IntermediateToken - (184:15,9 [1] Blocks.cshtml) - Html - p
                     IntermediateToken - (185:15,10 [1] Blocks.cshtml) - Html - >
                     IntermediateToken - (186:15,11 [29] Blocks.cshtml) - Html - No really, we wrote 10 lines!
-                    IntermediateToken - (215:15,40 [4] Blocks.cshtml) - Html - </p>
+                    IntermediateToken - (215:15,40 [1] Blocks.cshtml) - Html - <
+                    IntermediateToken - (216:15,41 [1] Blocks.cshtml) - Html - /
+                    IntermediateToken - (217:15,42 [1] Blocks.cshtml) - Html - p
+                    IntermediateToken - (218:15,43 [1] Blocks.cshtml) - Html - >
                     IntermediateToken - (219:15,44 [2] Blocks.cshtml) - Html - \n
                 CSharpCode - (221:16,0 [30] Blocks.cshtml)
                     IntermediateToken - (221:16,0 [30] Blocks.cshtml) - CSharp -         break;\n    default:\n
                 HtmlContent - (251:18,0 [39] Blocks.cshtml)
                     IntermediateToken - (251:18,0 [8] Blocks.cshtml) - Html -         
-                    IntermediateToken - (259:18,8 [2] Blocks.cshtml) - Html - <p
+                    IntermediateToken - (259:18,8 [1] Blocks.cshtml) - Html - <
+                    IntermediateToken - (260:18,9 [1] Blocks.cshtml) - Html - p
                     IntermediateToken - (261:18,10 [1] Blocks.cshtml) - Html - >
                     IntermediateToken - (262:18,11 [22] Blocks.cshtml) - Html - Actually, we didn't...
-                    IntermediateToken - (284:18,33 [4] Blocks.cshtml) - Html - </p>
+                    IntermediateToken - (284:18,33 [1] Blocks.cshtml) - Html - <
+                    IntermediateToken - (285:18,34 [1] Blocks.cshtml) - Html - /
+                    IntermediateToken - (286:18,35 [1] Blocks.cshtml) - Html - p
+                    IntermediateToken - (287:18,36 [1] Blocks.cshtml) - Html - >
                     IntermediateToken - (288:18,37 [2] Blocks.cshtml) - Html - \n
                 CSharpCode - (290:19,0 [19] Blocks.cshtml)
                     IntermediateToken - (290:19,0 [19] Blocks.cshtml) - CSharp -         break;\n}\n
@@ -63,13 +79,17 @@ Document -
                     IntermediateToken - (312:22,1 [35] Blocks.cshtml) - CSharp - for(int j = 1; j <= 10; j += 2) {\n
                 HtmlContent - (347:23,0 [29] Blocks.cshtml)
                     IntermediateToken - (347:23,0 [4] Blocks.cshtml) - Html -     
-                    IntermediateToken - (351:23,4 [2] Blocks.cshtml) - Html - <p
+                    IntermediateToken - (351:23,4 [1] Blocks.cshtml) - Html - <
+                    IntermediateToken - (352:23,5 [1] Blocks.cshtml) - Html - p
                     IntermediateToken - (353:23,6 [1] Blocks.cshtml) - Html - >
                     IntermediateToken - (354:23,7 [22] Blocks.cshtml) - Html - Hello again from C#, #
                 CSharpExpression - (378:23,31 [1] Blocks.cshtml)
                     IntermediateToken - (378:23,31 [1] Blocks.cshtml) - CSharp - j
                 HtmlContent - (380:23,33 [6] Blocks.cshtml)
-                    IntermediateToken - (380:23,33 [4] Blocks.cshtml) - Html - </p>
+                    IntermediateToken - (380:23,33 [1] Blocks.cshtml) - Html - <
+                    IntermediateToken - (381:23,34 [1] Blocks.cshtml) - Html - /
+                    IntermediateToken - (382:23,35 [1] Blocks.cshtml) - Html - p
+                    IntermediateToken - (383:23,36 [1] Blocks.cshtml) - Html - >
                     IntermediateToken - (384:23,37 [2] Blocks.cshtml) - Html - \n
                 CSharpCode - (386:24,0 [3] Blocks.cshtml)
                     IntermediateToken - (386:24,0 [3] Blocks.cshtml) - CSharp - }\n
@@ -79,43 +99,59 @@ Document -
                     IntermediateToken - (392:26,1 [7] Blocks.cshtml) - CSharp - try {\n
                 HtmlContent - (399:27,0 [41] Blocks.cshtml)
                     IntermediateToken - (399:27,0 [4] Blocks.cshtml) - Html -     
-                    IntermediateToken - (403:27,4 [2] Blocks.cshtml) - Html - <p
+                    IntermediateToken - (403:27,4 [1] Blocks.cshtml) - Html - <
+                    IntermediateToken - (404:27,5 [1] Blocks.cshtml) - Html - p
                     IntermediateToken - (405:27,6 [1] Blocks.cshtml) - Html - >
                     IntermediateToken - (406:27,7 [28] Blocks.cshtml) - Html - That time, we wrote 5 lines!
-                    IntermediateToken - (434:27,35 [4] Blocks.cshtml) - Html - </p>
+                    IntermediateToken - (434:27,35 [1] Blocks.cshtml) - Html - <
+                    IntermediateToken - (435:27,36 [1] Blocks.cshtml) - Html - /
+                    IntermediateToken - (436:27,37 [1] Blocks.cshtml) - Html - p
+                    IntermediateToken - (437:27,38 [1] Blocks.cshtml) - Html - >
                     IntermediateToken - (438:27,39 [2] Blocks.cshtml) - Html - \n
                 CSharpCode - (440:28,0 [25] Blocks.cshtml)
                     IntermediateToken - (440:28,0 [25] Blocks.cshtml) - CSharp - } catch(Exception ex) {\n
                 HtmlContent - (465:29,0 [33] Blocks.cshtml)
                     IntermediateToken - (465:29,0 [4] Blocks.cshtml) - Html -     
-                    IntermediateToken - (469:29,4 [2] Blocks.cshtml) - Html - <p
+                    IntermediateToken - (469:29,4 [1] Blocks.cshtml) - Html - <
+                    IntermediateToken - (470:29,5 [1] Blocks.cshtml) - Html - p
                     IntermediateToken - (471:29,6 [1] Blocks.cshtml) - Html - >
                     IntermediateToken - (472:29,7 [26] Blocks.cshtml) - Html - Oh no! An error occurred: 
                 CSharpExpression - (500:29,35 [10] Blocks.cshtml)
                     IntermediateToken - (500:29,35 [10] Blocks.cshtml) - CSharp - ex.Message
                 HtmlContent - (511:29,46 [6] Blocks.cshtml)
-                    IntermediateToken - (511:29,46 [4] Blocks.cshtml) - Html - </p>
+                    IntermediateToken - (511:29,46 [1] Blocks.cshtml) - Html - <
+                    IntermediateToken - (512:29,47 [1] Blocks.cshtml) - Html - /
+                    IntermediateToken - (513:29,48 [1] Blocks.cshtml) - Html - p
+                    IntermediateToken - (514:29,49 [1] Blocks.cshtml) - Html - >
                     IntermediateToken - (515:29,50 [2] Blocks.cshtml) - Html - \n
                 CSharpCode - (517:30,0 [3] Blocks.cshtml)
                     IntermediateToken - (517:30,0 [3] Blocks.cshtml) - CSharp - }\n
                 HtmlContent - (520:31,0 [14] Blocks.cshtml)
                     IntermediateToken - (520:31,0 [2] Blocks.cshtml) - Html - \n
-                    IntermediateToken - (522:32,0 [2] Blocks.cshtml) - Html - <p
+                    IntermediateToken - (522:32,0 [1] Blocks.cshtml) - Html - <
+                    IntermediateToken - (523:32,1 [1] Blocks.cshtml) - Html - p
                     IntermediateToken - (524:32,2 [1] Blocks.cshtml) - Html - >
                     IntermediateToken - (525:32,3 [9] Blocks.cshtml) - Html - i is now 
                 CSharpExpression - (535:32,13 [1] Blocks.cshtml)
                     IntermediateToken - (535:32,13 [1] Blocks.cshtml) - CSharp - i
                 HtmlContent - (536:32,14 [8] Blocks.cshtml)
-                    IntermediateToken - (536:32,14 [4] Blocks.cshtml) - Html - </p>
+                    IntermediateToken - (536:32,14 [1] Blocks.cshtml) - Html - <
+                    IntermediateToken - (537:32,15 [1] Blocks.cshtml) - Html - /
+                    IntermediateToken - (538:32,16 [1] Blocks.cshtml) - Html - p
+                    IntermediateToken - (539:32,17 [1] Blocks.cshtml) - Html - >
                     IntermediateToken - (540:32,18 [4] Blocks.cshtml) - Html - \n\n
                 CSharpCode - (545:34,1 [22] Blocks.cshtml)
                     IntermediateToken - (545:34,1 [22] Blocks.cshtml) - CSharp - lock(new object()) {\n
                 HtmlContent - (567:35,0 [53] Blocks.cshtml)
                     IntermediateToken - (567:35,0 [4] Blocks.cshtml) - Html -     
-                    IntermediateToken - (571:35,4 [2] Blocks.cshtml) - Html - <p
+                    IntermediateToken - (571:35,4 [1] Blocks.cshtml) - Html - <
+                    IntermediateToken - (572:35,5 [1] Blocks.cshtml) - Html - p
                     IntermediateToken - (573:35,6 [1] Blocks.cshtml) - Html - >
                     IntermediateToken - (574:35,7 [40] Blocks.cshtml) - Html - This block is locked, for your security!
-                    IntermediateToken - (614:35,47 [4] Blocks.cshtml) - Html - </p>
+                    IntermediateToken - (614:35,47 [1] Blocks.cshtml) - Html - <
+                    IntermediateToken - (615:35,48 [1] Blocks.cshtml) - Html - /
+                    IntermediateToken - (616:35,49 [1] Blocks.cshtml) - Html - p
+                    IntermediateToken - (617:35,50 [1] Blocks.cshtml) - Html - >
                     IntermediateToken - (618:35,51 [2] Blocks.cshtml) - Html - \n
                 CSharpCode - (620:36,0 [1] Blocks.cshtml)
                     IntermediateToken - (620:36,0 [1] Blocks.cshtml) - CSharp - }

@@ -31,7 +31,8 @@ Document -
                     IntermediateToken -  - CSharp - BeginContext(193, 19, true);
                 HtmlContent - (193:11,0 [19] RazorPagesWithRouteTemplate.cshtml)
                     IntermediateToken - (193:11,0 [2] RazorPagesWithRouteTemplate.cshtml) - Html - \n
-                    IntermediateToken - (195:12,0 [3] RazorPagesWithRouteTemplate.cshtml) - Html - <h1
+                    IntermediateToken - (195:12,0 [1] RazorPagesWithRouteTemplate.cshtml) - Html - <
+                    IntermediateToken - (196:12,1 [2] RazorPagesWithRouteTemplate.cshtml) - Html - h1
                     IntermediateToken - (198:12,3 [1] RazorPagesWithRouteTemplate.cshtml) - Html - >
                     IntermediateToken - (199:12,4 [13] RazorPagesWithRouteTemplate.cshtml) - Html - New Customer 
                 CSharpCode - 
@@ -45,7 +46,10 @@ Document -
                 CSharpCode - 
                     IntermediateToken -  - CSharp - BeginContext(223, 7, true);
                 HtmlContent - (223:12,28 [7] RazorPagesWithRouteTemplate.cshtml)
-                    IntermediateToken - (223:12,28 [5] RazorPagesWithRouteTemplate.cshtml) - Html - </h1>
+                    IntermediateToken - (223:12,28 [1] RazorPagesWithRouteTemplate.cshtml) - Html - <
+                    IntermediateToken - (224:12,29 [1] RazorPagesWithRouteTemplate.cshtml) - Html - /
+                    IntermediateToken - (225:12,30 [2] RazorPagesWithRouteTemplate.cshtml) - Html - h1
+                    IntermediateToken - (227:12,32 [1] RazorPagesWithRouteTemplate.cshtml) - Html - >
                     IntermediateToken - (228:12,33 [2] RazorPagesWithRouteTemplate.cshtml) - Html - \n
                 CSharpCode - 
                     IntermediateToken -  - CSharp - EndContext();

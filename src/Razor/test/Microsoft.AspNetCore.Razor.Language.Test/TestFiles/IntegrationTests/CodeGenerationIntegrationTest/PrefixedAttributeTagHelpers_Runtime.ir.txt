@@ -20,7 +20,8 @@ Document -
                     IntermediateToken - (37:2,2 [242] PrefixedAttributeTagHelpers.cshtml) - CSharp - \n    var literate = "or illiterate";\n    var intDictionary = new Dictionary<string, int>\n    {\n        { "three", 3 },\n    };\n    var stringDictionary = new SortedDictionary<string, string>\n    {\n        { "name", "value" },\n    };\n
                 HtmlContent - (282:13,0 [49] PrefixedAttributeTagHelpers.cshtml)
                     IntermediateToken - (282:13,0 [2] PrefixedAttributeTagHelpers.cshtml) - Html - \n
-                    IntermediateToken - (284:14,0 [4] PrefixedAttributeTagHelpers.cshtml) - Html - <div
+                    IntermediateToken - (284:14,0 [1] PrefixedAttributeTagHelpers.cshtml) - Html - <
+                    IntermediateToken - (285:14,1 [3] PrefixedAttributeTagHelpers.cshtml) - Html - div
                     IntermediateToken - (288:14,4 [36] PrefixedAttributeTagHelpers.cshtml) - Html -  class="randomNonTagHelperAttribute"
                     IntermediateToken - (324:14,40 [1] PrefixedAttributeTagHelpers.cshtml) - Html - >
                     IntermediateToken - (325:14,41 [6] PrefixedAttributeTagHelpers.cshtml) - Html - \n    
@@ -114,4 +115,7 @@ Document -
                     DefaultTagHelperExecute - 
                 HtmlContent - (861:21,64 [8] PrefixedAttributeTagHelpers.cshtml)
                     IntermediateToken - (861:21,64 [2] PrefixedAttributeTagHelpers.cshtml) - Html - \n
-                    IntermediateToken - (863:22,0 [6] PrefixedAttributeTagHelpers.cshtml) - Html - </div>
+                    IntermediateToken - (863:22,0 [1] PrefixedAttributeTagHelpers.cshtml) - Html - <
+                    IntermediateToken - (864:22,1 [1] PrefixedAttributeTagHelpers.cshtml) - Html - /
+                    IntermediateToken - (865:22,2 [3] PrefixedAttributeTagHelpers.cshtml) - Html - div
+                    IntermediateToken - (868:22,5 [1] PrefixedAttributeTagHelpers.cshtml) - Html - >

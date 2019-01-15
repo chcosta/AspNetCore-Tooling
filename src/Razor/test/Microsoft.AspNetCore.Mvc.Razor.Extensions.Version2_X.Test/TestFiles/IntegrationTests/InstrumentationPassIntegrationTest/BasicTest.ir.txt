@@ -24,11 +24,15 @@ Document -
                 CSharpCode - 
                     IntermediateToken -  - CSharp - BeginContext(31, 28, true);
                 HtmlContent - (31:1,0 [28] BasicTest.cshtml)
-                    IntermediateToken - (31:1,0 [5] BasicTest.cshtml) - Html - <span
+                    IntermediateToken - (31:1,0 [1] BasicTest.cshtml) - Html - <
+                    IntermediateToken - (32:1,1 [4] BasicTest.cshtml) - Html - span
                     IntermediateToken - (36:1,5 [9] BasicTest.cshtml) - Html -  someattr
                     IntermediateToken - (45:1,14 [1] BasicTest.cshtml) - Html - >
                     IntermediateToken - (46:1,15 [4] BasicTest.cshtml) - Html - Hola
-                    IntermediateToken - (50:1,19 [7] BasicTest.cshtml) - Html - </span>
+                    IntermediateToken - (50:1,19 [1] BasicTest.cshtml) - Html - <
+                    IntermediateToken - (51:1,20 [1] BasicTest.cshtml) - Html - /
+                    IntermediateToken - (52:1,21 [4] BasicTest.cshtml) - Html - span
+                    IntermediateToken - (56:1,25 [1] BasicTest.cshtml) - Html - >
                     IntermediateToken - (57:1,26 [2] BasicTest.cshtml) - Html - \n
                 CSharpCode - 
                     IntermediateToken -  - CSharp - EndContext();
@@ -110,7 +114,8 @@ Document -
                     IntermediateToken -  - CSharp - BeginContext(158, 31, true);
                 HtmlContent - (158:5,7 [31] BasicTest.cshtml)
                     IntermediateToken - (158:5,7 [4] BasicTest.cshtml) - Html - \n\n
-                    IntermediateToken - (162:7,0 [5] BasicTest.cshtml) - Html - <span
+                    IntermediateToken - (162:7,0 [1] BasicTest.cshtml) - Html - <
+                    IntermediateToken - (163:7,1 [4] BasicTest.cshtml) - Html - span
                     IntermediateToken - (167:7,5 [1] BasicTest.cshtml) - Html - >
                     IntermediateToken - (168:7,6 [21] BasicTest.cshtml) - Html - Here is some content 
                 CSharpCode - 
@@ -122,7 +127,10 @@ Document -
                 CSharpCode - 
                     IntermediateToken -  - CSharp - BeginContext(207, 9, true);
                 HtmlContent - (207:7,45 [9] BasicTest.cshtml)
-                    IntermediateToken - (207:7,45 [7] BasicTest.cshtml) - Html - </span>
+                    IntermediateToken - (207:7,45 [1] BasicTest.cshtml) - Html - <
+                    IntermediateToken - (208:7,46 [1] BasicTest.cshtml) - Html - /
+                    IntermediateToken - (209:7,47 [4] BasicTest.cshtml) - Html - span
+                    IntermediateToken - (213:7,51 [1] BasicTest.cshtml) - Html - >
                     IntermediateToken - (214:7,52 [2] BasicTest.cshtml) - Html - \n
                 CSharpCode - 
                     IntermediateToken -  - CSharp - EndContext();
@@ -140,10 +148,14 @@ Document -
                         CSharpCode - 
                             IntermediateToken -  - CSharp - BeginContext(222, 24, true);
                         HtmlContent - (222:8,6 [24] BasicTest.cshtml)
-                            IntermediateToken - (222:8,6 [5] BasicTest.cshtml) - Html - <span
+                            IntermediateToken - (222:8,6 [1] BasicTest.cshtml) - Html - <
+                            IntermediateToken - (223:8,7 [4] BasicTest.cshtml) - Html - span
                             IntermediateToken - (227:8,11 [1] BasicTest.cshtml) - Html - >
                             IntermediateToken - (228:8,12 [11] BasicTest.cshtml) - Html - Hello world
-                            IntermediateToken - (239:8,23 [7] BasicTest.cshtml) - Html - </span>
+                            IntermediateToken - (239:8,23 [1] BasicTest.cshtml) - Html - <
+                            IntermediateToken - (240:8,24 [1] BasicTest.cshtml) - Html - /
+                            IntermediateToken - (241:8,25 [4] BasicTest.cshtml) - Html - span
+                            IntermediateToken - (245:8,29 [1] BasicTest.cshtml) - Html - >
                         CSharpCode - 
                             IntermediateToken -  - CSharp - EndContext();
                         CSharpCode - 
